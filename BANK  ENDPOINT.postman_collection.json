@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "e17fde31-7a9f-4546-8af5-63110e8ff576",
+		"name": "BANK  ENDPOINT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET USER ACCOUNT INFO",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0NTY1NzY3NzM3OCIsImV4cCI6MTY0MjkwMzgyMSwiaWF0IjoxNjQyODg1ODIxfQ.1vikZRG_4nS6omNjyGxqPyRyaTjIvczmkuuFwlpBvuN1lngsHEUthv3RwD4NIGBY03cmk0I-suhK0uSEzEchTg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"password\": \"nitaxTechnologies\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/user/account_info/1233283038",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"account_info",
+						"1233283038"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN ",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"accountNo\": \"45657677378\",\r\n  \"accountPassword\": \"blameJohnDoe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER ACCOUNT STATEMENT",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0NTY1NzY3NzM3OCIsImV4cCI6MTY0MjkwMzgyMSwiaWF0IjoxNjQyODg1ODIxfQ.1vikZRG_4nS6omNjyGxqPyRyaTjIvczmkuuFwlpBvuN1lngsHEUthv3RwD4NIGBY03cmk0I-suhK0uSEzEchTg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/user/account_statement/1233283038",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"account_statement",
+						"1233283038"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DEPOSIT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0NTY1NzY3NzM3OCIsImV4cCI6MTY0MjkwMzgyMSwiaWF0IjoxNjQyODg1ODIxfQ.1vikZRG_4nS6omNjyGxqPyRyaTjIvczmkuuFwlpBvuN1lngsHEUthv3RwD4NIGBY03cmk0I-suhK0uSEzEchTg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"accountNumber\": 1233283038,\r\n  \"amount\": 5800\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/user/deposit",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WITHDRAW",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0NTY1NzY3NzM3OCIsImV4cCI6MTY0MjkwMzgyMSwiaWF0IjoxNjQyODg1ODIxfQ.1vikZRG_4nS6omNjyGxqPyRyaTjIvczmkuuFwlpBvuN1lngsHEUthv3RwD4NIGBY03cmk0I-suhK0uSEzEchTg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"accountNumber\": 1233283038,\r\n  \"accountPassword\": \"nitaxTechnologies\",\r\n  \"withdrawnAmount\": 2400\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/user/withdrawal",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"withdrawal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE ACCOUNT",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"accountName\": \"smokeDZA\",\r\n  \"accountPassword\": \"nitaxTechnologies\",\r\n  \"initialDeposit\": 7000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/user/create_account",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"create_account"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
